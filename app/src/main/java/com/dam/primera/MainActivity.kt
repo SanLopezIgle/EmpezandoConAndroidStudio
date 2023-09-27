@@ -35,6 +35,10 @@ class MainActivity : ComponentActivity() {
             }
         }
         Log.d(TAG, "estoy en onCreate")
+
+        //calcular(1,2)
+        calcular(a=1, b=2)
+        calcular(b=1, a=2)
     }
 
     override fun onStart() {
@@ -60,6 +64,12 @@ class MainActivity : ComponentActivity() {
     override fun onDestroy() {
         super.onDestroy()
         Log.d(TAG, "estoy en onDestroy")
+    }
+
+    //La funcion calcular la llamo dentro del onCreate
+    fun calcular(a:Int, b:Int){
+        val operacion = a+b
+        Log.d("calcular", operacion.toString())
     }
 }
 
